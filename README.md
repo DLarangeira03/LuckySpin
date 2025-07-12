@@ -6,7 +6,7 @@ LuckySpin is a mobile game application developed in Kotlin for the final project
 
 - 📱 Developed using **Kotlin** and **Android Studio**
 - 🎓 Final project for the **Mobile Development** course at **Instituto Politécnico de Tomar (IPT)**
-- 👥 Built by Diogo Larangeira and Rúben Dias(https://github.com/aspaceusername)
+- 👥 Built by Diogo Larangeira and [Rúben Dias](https://github.com/aspaceusername)
 
 ---
 
