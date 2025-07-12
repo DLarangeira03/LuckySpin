@@ -1,0 +1,146 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- TextView do título-->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/sobre_nos"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+    <!-- View que serve de separador-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/titulo"
+        android:paddingTop="30dp"
+        android:layout_height="11dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- Nome do aluno -->
+    <TextView
+        android:id="@+id/nomeAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/titulo"
+        android:text="@string/nome_dev1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Nome do segundo aluno -->
+    <TextView
+        android:id="@+id/nomeAluno2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nome_dev2"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@id/numeroAluno"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp" />
+
+    <!-- Número do aluno -->
+    <TextView
+        android:id="@+id/numeroAluno"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_dev_1"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/nomeAluno"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Número do segundo aluno -->
+    <TextView
+        android:id="@+id/numeroAluno2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/n_dev_2"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/nomeAluno2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Nome do curso -->
+    <TextView
+        android:id="@+id/aboutCurso"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aboutCurso"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        android:layout_below="@id/numeroAluno2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Nome da unidade curricular -->
+    <TextView
+        android:id="@+id/unidadeCurricular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/aboutUC"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/aboutCurso"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- Ano letivo -->
+    <TextView
+        android:id="@+id/anoTurma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ano_letivo"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:layout_below="@id/unidadeCurricular"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp" />
+
+    <!-- TextView com as fontes de consulta do projeto -->
+    <TextView
+        android:id="@+id/fontes"
+        android:layout_width="375dp"
+        android:layout_height="375dp"
+        android:layout_below="@id/anoTurma"
+        android:layout_marginTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
+        android:text="@string/fontes"
+        android:textSize="20sp"
+        android:textStyle="bold"/>
+
+    <!-- Botão para voltar à página inicial -->
+    <Button
+        android:id="@+id/btVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/fontes"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:background="@android:color/holo_orange_dark"
+        android:backgroundTint="@null"
+        android:text="@string/voltar"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"/>
+
+
+</RelativeLayout>
+</ScrollView>

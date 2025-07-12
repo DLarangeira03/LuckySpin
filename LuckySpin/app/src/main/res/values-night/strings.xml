@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="appTitle">LuckySpin</string>
+    <string name="loginWelcome">Bem vindo de volta.</string>
+    <string name="textInputUsername">Username</string>
+    <string name="textTitleInputPassword">Enter your password</string>
+    <string name="textInputPassword">Password</string>
+    <string name="loginForgotPassword">Forgot password?</string>
+    <string name="btnLogin">Login</string>
+    <string name="loginRegisterText">New user? Sign up</string>
+    <string name="appDescription">online casino</string>
+    <string name="casinoWelcomeText">BEM VINDO</string>
+    <string name="btnJoin">JUNTA-TE HOJE</string>
+    <string name="txtWelcomeOferta">OFERTA SEM DEPÓSITO</string>
+    <string name="insertDeposit">Insira valor</string>
+</resources>

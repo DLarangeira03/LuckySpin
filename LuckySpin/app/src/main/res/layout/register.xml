@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TextView do título-->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+    <!-- TextView que identifica a página de registo-->
+    <TextView
+        android:id="@+id/signupTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="60dp"
+        android:layout_below="@id/titulo"
+        android:text="@string/regista_te_e_joga"
+        android:textSize="26sp"
+        android:textStyle="bold" />
+
+    <!-- TextView que indica ao Utilizador para introduzir o seu email -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/emailInput"
+        android:layout_alignStart="@id/emailInput"
+        android:text="@string/introduza_o_seu_email"
+        android:textSize="16sp" />
+
+    <!-- EditText onde o utilziador coloca o seu email -->
+    <EditText
+        android:id="@+id/emailInput"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/signupTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:hint="@string/email"
+        android:padding="10dp" />
+
+    <!-- TextView que indica ao Utilizador para introduzir o seu nome de utilziador -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/usernameInput"
+        android:layout_alignStart="@id/emailInput"
+        android:text="@string/textTitleInputUsername"
+        android:textSize="16sp" />
+
+    <!-- EditText onde o utilziador coloca o seu nome de utilizador -->
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/emailInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:hint="@string/username"
+        android:maxLines="1"
+        android:padding="10dp" />
+
+    <!-- TextView que indica ao Utilizador para introduzir a sua palavra-passe -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/passwordInput"
+        android:layout_alignStart="@id/passwordInput"
+        android:layout_marginTop="40dp"
+        android:text="@string/textTitleInputPassword"
+        android:textSize="16sp" />
+
+    <!-- EditText onde o utilziador coloca a sua palavra-passe -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/usernameInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="0dp"
+        android:hint="@string/textInputPassword"
+        android:padding="10dp"
+        android:inputType="textPassword" />
+
+    <!-- Botão que permite registar na app -->
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="260sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@null"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/criar_conta"/>
+
+</RelativeLayout>

@@ -1,0 +1,255 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- TextView do título-->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+    <!-- View que serve de separador-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/titulo"
+        android:paddingTop="30dp"
+        android:layout_height="11dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- ImageButton que representa o perfil do utilizador autenticado-->
+    <ImageButton
+        android:id="@+id/profilePicture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/img_arrendondada"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile" />
+
+    <!-- TextView onde aparecerá o nome do utilizador autenticado-->
+    <TextView
+        android:id="@+id/usernamePlace"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_toEndOf="@id/profilePicture"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:hint="@string/username"
+        android:textColorHint="@android:color/white"
+        />
+
+    <!-- TextView onde aparecerá os créditos do utilizador autenticado-->
+    <TextView
+        android:id="@+id/userCredits"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="0dp"
+        android:layout_below="@id/usernamePlace"
+        android:layout_toEndOf="@id/profilePicture"
+        android:hint="@string/creditos"
+        android:textColorHint="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- ImageButton que permite aceder à página de ajuda e explicação do funcionamento-->
+    <ImageButton
+        android:id="@+id/btHelp"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="16dp"
+        android:layout_toStartOf="@id/btDef"
+        android:background="@drawable/bt_redondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/question"
+        android:text="@string/como_jogar"
+        android:textStyle="bold"
+        app:backgroundTint="@null" />
+
+    <!-- ImageButton das definições, coloca dois botões visiveis dos sensores-->
+    <ImageButton
+        android:id="@+id/btDef"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/bt_redondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/settings"
+        android:text="@string/settings"
+        android:textStyle="bold"
+        app:backgroundTint="@null" />
+
+    <!-- ImageButton que permite desligar e ligar o acelerómetro-->
+    <ImageButton
+        android:id="@+id/btAc"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/btDef"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="92dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/bt_redondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ac_icon"
+        android:text="@string/sensor_on"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        android:visibility="gone"/>
+
+    <!-- ImageButton que permite desligar e ligar a vibração-->
+    <ImageButton
+        android:id="@+id/btVib"
+        android:layout_width="55dp"
+        android:layout_height="55dp"
+        android:layout_below="@+id/btAc"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="3dp"
+        android:background="@drawable/bt_redondo"
+        android:scaleType="centerCrop"
+        android:src="@drawable/vib_icon"
+        android:text="@string/vibrar_ativo"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        android:visibility="gone"/>
+
+    <!-- ImageView da roleta-->
+    <ImageView
+        android:id="@+id/rouletteWheel"
+        android:layout_width="405dp"
+        android:layout_height="350dp"
+        android:layout_marginTop="115dp"
+        android:layout_below="@id/userCredits"
+        android:background="@android:color/transparent"
+        android:contentDescription="@string/roulette"
+        android:scaleType="fitCenter"
+        />
+
+    <!-- ImageView onde aparece um gif com o resultado da aposta -->
+    <ImageView
+        android:id="@+id/imageViewResult"
+        android:layout_width="wrap_content"
+        android:layout_height="100dp"
+        android:layout_below="@id/userCredits"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/result"
+        android:scaleType="fitCenter"
+        />
+
+    <!-- TextView onde identifica a aposta -->
+    <TextView
+        android:id="@+id/textAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rouletteWheel"
+        android:layout_marginStart="17dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/amount"
+        android:layout_toStartOf="@id/betValue"
+        android:textColor="@android:color/white"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- EditText onde o utilizador escolhe quanto quer apostar-->
+    <EditText
+        android:id="@+id/betValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/rouletteWheel"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="24dp"
+        android:layout_centerHorizontal="true"
+        android:inputType="number"
+        android:maxLines="1"
+        android:text="@string/betValueDefault"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <!-- Botão para apostar na cor preta -->
+    <Button
+        android:id="@+id/btBlack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textAmount"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="25sp"
+        android:layout_toStartOf="@id/btRed"
+        android:background="@android:color/background_dark"
+        android:text="@string/black"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@null" />
+
+    <!-- Botão para apostar na cor vermelha -->
+    <Button
+        android:id="@+id/btRed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@android:color/holo_red_dark"
+        android:layout_below="@id/textAmount"
+        android:layout_centerHorizontal="true"
+        android:text="@string/red"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null"/>
+
+    <!-- Botão para apostar na cor verde -->
+    <Button
+        android:id="@+id/btGreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@color/verde"
+        android:layout_below="@id/textAmount"
+        android:layout_toEndOf="@id/btRed"
+        android:text="@string/green"
+        android:textStyle="bold"
+        android:textColor="@android:color/white"
+        app:backgroundTint="@null"/>
+
+    <!-- Botão para girar a roleta caso o acelerómetro esteja desligado -->
+    <Button
+        android:id="@+id/btSpin"
+        android:layout_width="265dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/btGreen"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/spin"
+        android:textColor="@android:color/background_dark"
+        android:textStyle="bold"
+        app:backgroundTint="@null"
+        android:visibility="gone"/>
+
+
+
+</RelativeLayout>
+</ScrollView>

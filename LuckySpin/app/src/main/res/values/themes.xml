@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme for Material Components -->
+    <style name="Base.Tema.RodaSortuda" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:colorBackground">@color/cor_fundo_primario</item>
+        <item name="android:textColor">@color/cor_texto_claro</item>
+        <item name="android:textColorPrimary">@color/cor_texto_principal</item>
+        <item name="android:textColorSecondary">@color/cor_texto_secundario</item>
+        <item name="colorPrimary">@android:color/holo_orange_dark</item>
+        <item name="colorSecondary">@color/cor_realce_azul</item>
+        <item name="android:shadowColor">@color/cor_sombra</item>
+
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+
+    </style>
+    <style name="Tema.RodaSortuda" parent="Base.Tema.RodaSortuda" />
+</resources>

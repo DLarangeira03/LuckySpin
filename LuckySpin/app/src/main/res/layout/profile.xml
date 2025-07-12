@@ -1,0 +1,236 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <!-- TextView do título-->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+    <!-- View que serve de separador-->
+    <View
+        android:layout_width="match_parent"
+        android:layout_below="@id/titulo"
+        android:paddingTop="30dp"
+        android:layout_height="11dp"
+        android:background="@android:color/darker_gray"/>
+
+    <!-- ImageView que serve para voltar atrás para a página de roleta-->
+    <ImageView
+        android:id="@+id/btVoltar"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="30dp"
+        android:layout_below="@id/titulo"
+        android:layout_toStartOf="@+id/profilePicture"
+        android:src="@drawable/baseline_arrow_back_ios_new_24"/>
+
+
+    <!-- ImageButton que aparece a imagem de perfil(default) do utilizador-->
+    <ImageButton
+        android:id="@+id/profilePicture"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="100dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img_arrendondada"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile"
+        />
+
+    <!-- TextView que identifica o nome de utilizador-->
+    <TextView
+        android:id="@+id/usernameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/profilePicture"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:hint="@string/nome_nutilizador"
+        android:textColorHint="@android:color/white"
+        />
+
+    <!-- EditText onde aparece o nome de utilizador do utilizador autenticado que pode ser alterado-->
+    <EditText
+        android:id="@+id/usernameEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/profilePicture"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="45dp"
+        android:layout_toEndOf="@id/usernameTextView"
+        android:inputType="text"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- TextView que identifica o email do utilizador-->
+    <TextView
+        android:id="@+id/emailTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/usernameTextView"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:hint="@string/email"
+        android:textColorHint="@android:color/white"
+        />
+
+    <!-- EditText onde aparece o email do utilizador autenticado que pode ser alterado-->
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/usernameTextView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="15dp"
+        android:layout_toEndOf="@id/usernameTextView"
+        android:inputType="textEmailAddress"
+        android:maxLines="1"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <!-- TextView que identifica onde deve ser escrita a nova palavra-passe-->
+    <TextView
+        android:id="@+id/passwordNewTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/emailTextView"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:hint="@string/nova_npalavra_npasse"
+        android:textColorHint="@android:color/white"
+        android:textAlignment="center"
+        />
+
+    <!-- EditText para o utilizador escrever a sua nova palavra-passe-->
+    <EditText
+        android:id="@+id/passwordNewEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/emailEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="20dp"
+        android:layout_toEndOf="@id/usernameTextView"
+        android:inputType="textPassword"
+        android:hint="@string/nova_palavra_passe"
+        android:maxLines="1"
+        android:textSize="20sp"
+        />
+
+    <!-- TextView que identifica onde deve ser escrita a  palavra-passe-->
+    <TextView
+        android:id="@+id/passwordTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="0dp"
+        android:layout_marginStart="10dp"
+        android:layout_below="@id/passwordNewEditText"
+        android:textSize="25sp"
+        android:textStyle="bold"
+        android:hint="@string/palavra_npasse"
+        android:textColorHint="@android:color/white"
+        android:textAlignment="center"
+        />
+
+    <!-- EditText para o utilizador escrever a sua  palavra-passe-->
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordNewEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="19dp"
+        android:layout_marginTop="40dp"
+        android:layout_toEndOf="@id/usernameTextView"
+        android:inputType="textPassword"
+        android:hint="@string/escreva_a_sua_palavra_passe"
+        android:maxLines="1"
+        android:textSize="20sp"
+        />
+
+    <!-- Botão que permite alterar os dados do utilizador-->
+    <Button
+        android:id="@+id/alterarDadosButton"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="-75dp"
+        android:layout_above="@id/btLogout"
+        android:layout_marginStart="30dp"
+        android:layout_alignParentStart="true"
+        android:text="@string/alterar_dados"
+        app:backgroundTint="@null"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+    <!-- Botão que permite eliminar a conta do utilizador-->
+    <Button
+        android:id="@+id/eliminarUser"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_above="@id/btLogout"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="70dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="-75dp"
+        android:background="@android:color/holo_orange_dark"
+        android:text="@string/eliminar_conta"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:backgroundTint="@null" />
+
+    <!-- Botão que permite terminar a sessão do utilizador-->
+    <Button
+        android:id="@+id/btLogout"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:text="@string/terminar_sess_o"
+        app:backgroundTint="@null"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        />
+
+
+</RelativeLayout>
+</ScrollView>

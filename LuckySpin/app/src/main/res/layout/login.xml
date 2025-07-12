@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- TextView do título-->
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/appTitle"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        />
+
+    <!-- TextView mensagem de boas-vindas ao Utilizador-->
+    <TextView
+        android:id="@+id/welcomeBackTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/titulo"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="60dp"
+        android:text="@string/loginWelcome"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        tools:ignore="NotSibling" />
+
+    <!-- TextView que indica ao Utilizador para introduzir o seu nome de utilziador -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/usernameInput"
+        android:layout_alignStart="@id/usernameInput"
+        android:layout_marginBottom="0dp"
+        android:text="@string/textTitleInputUsername"
+        android:textSize="16sp" />
+
+    <!-- EditText onde o utilziador coloca o seu nome de utilizador -->
+    <EditText
+        android:id="@+id/usernameInput"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="40dp"
+        android:layout_below="@id/welcomeBackTitle"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/textInputUsername"
+        android:padding="10dp"
+        android:inputType="text"
+        android:maxLines="1"/>
+
+    <!-- TextView que indica ao Utilizador para introduzir a sua palavra-passe -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/passwordInput"
+        android:layout_alignStart="@id/passwordInput"
+        android:layout_marginBottom="0dp"
+        android:text="@string/textTitleInputPassword"
+        android:textSize="16sp" />
+
+    <!-- EditText onde o utilziador coloca a sua palavra-passe -->
+    <EditText
+        android:id="@+id/passwordInput"
+        android:layout_width="350dp"
+        android:layout_height="48dp"
+        android:layout_below="@id/usernameInput"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/textInputPassword"
+        android:padding="10dp"
+        android:inputType="textPassword"
+        />
+
+    <!-- Botão para iniciar sessão -->
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="260sp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/passwordInput"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@null"
+        android:background="@android:color/holo_orange_dark"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:text="@string/btnLogin" />
+
+    <!-- TextView que indica ao utilizador onde se pode registar na app -->
+    <TextView
+        android:id="@+id/newUserSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="48sp"
+        android:layout_below="@id/loginButton"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:text="@string/loginRegisterText"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:clickable="true"
+        android:focusable="true"
+        />
+
+</RelativeLayout>

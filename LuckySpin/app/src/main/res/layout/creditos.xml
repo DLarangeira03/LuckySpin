@@ -1,0 +1,87 @@
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- TextView do título-->
+        <TextView
+            android:id="@+id/titulo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/appTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            />
+
+        <!-- View que serve de separador-->
+        <View
+            android:layout_width="match_parent"
+            android:layout_below="@id/titulo"
+            android:paddingTop="30dp"
+            android:layout_height="11dp"
+            android:background="@android:color/darker_gray"/>
+
+        <!-- TextView onde define o propósito da página -->
+        <TextView
+            android:id="@+id/txtDepositar"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/titulo"
+            android:layout_marginTop="50dp"
+            android:text="@string/txtDepositar"
+            android:textAlignment="center"
+            android:textSize="60sp" />
+
+        <!-- EditText onde o utilziador coloca o valor a depositar-->
+        <EditText
+            android:id="@+id/inputValor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginStart="100dp"
+            android:layout_marginEnd="100dp"
+            android:layout_below="@id/txtDepositar"
+            android:ems="10"
+            android:hint="@string/insertDeposit"
+            android:inputType="number" />
+
+        <!-- Botão que permite depositar créditos-->
+        <Button
+            android:id="@+id/btDepositar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/inputValor"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:text="@string/btnDeposit" />
+
+        <!-- Botão que permite voltar à página da roleta-->
+        <Button
+            android:id="@+id/btVoltar"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btDepositar"
+            android:layout_centerHorizontal="true"
+            android:text="@string/voltar"
+            android:layout_marginTop="25dp"
+            android:textAlignment="center"
+            android:textColor="@android:color/black"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</ScrollView>
