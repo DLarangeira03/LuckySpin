@@ -27,4 +27,10 @@ LuckySpin is a mobile game application developed in Kotlin for the final project
 - **Platform:** Android
 - **APIs & Tools:** Sheety, Android Sensors (Gyroscope)
 
+---
 
+## 🌐 Original Repository
+
+This is the official repository for the **LuckySpin** final project, developed at [Instituto Politécnico de Tomar (IPT)](https://www.ipt.pt).
+
+🔗 [Visit the original repo on GitHub](https://github.com/DAMGroupA2470524993/LuckySpin)
